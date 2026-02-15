@@ -1,0 +1,14 @@
+---
+- name: Testing Purpose
+  hosts: localhost
+  become: yes
+  gather_facts: false
+
+  tasks:
+    - name: Copy the index.html file
+      copy: 
+        src: /var/www/html/index.html
+        dest: /tmp/
+        remote_src: yes
+
+
