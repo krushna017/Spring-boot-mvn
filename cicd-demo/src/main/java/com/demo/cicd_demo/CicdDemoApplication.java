@@ -1,18 +1,13 @@
-package com.example.demo;
+package com.demo.cicd_demo;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@RestController
-public class DemoController {
+@SpringBootApplication
+public class CicdDemoApplication {
 
-    @Value("${build.number:0}")
-    private String buildNumber;
-
-    @GetMapping("/")
-    public String home() {
-        return "Welcome to DevOps CI/CD Project 🚀 <br> Build Number: " + buildNumber;
+    public static void main(String[] args) {
+        SpringApplication.run(CicdDemoApplication.class, args);
     }
-}
 
+}
