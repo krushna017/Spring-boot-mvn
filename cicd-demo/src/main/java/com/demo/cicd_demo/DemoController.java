@@ -8,7 +8,7 @@ public class DemoController {
 
     @GetMapping("/")
     public String home() {
-        return "DevOps CI/CD Working 🚀";
+        return "DevOps CI/CD Working 🚀 and Running";
     }
 }
 
